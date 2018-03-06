@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "Build" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName) -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>DEBUG</NMakePreprocessorDefinitions>
+    <IncludePath>E:\Apps\z88dk\include;c:\z88dk\include</IncludePath>
+    <OutDir>$(ProjectDir)Release</OutDir>
+    <IntDir />
+    <NMakeReBuildCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "Rebuild" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName) -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "Clean" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName).tap -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "Build" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName) -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "ReBuild" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName) -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>powershell -ExecutionPolicy Bypass $(SolutionDir)compiler.ps1 -Action "Clean" -SourceLocation $(ProjectDir) -OutFolder $(ProjectDir) -AssemblyName $(MSBuildProjectName) -ObjectFolder $(ProjectDir) -Flavour $(Configuration)</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path>$(ProjectDir)Release\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

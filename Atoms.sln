@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Atoms", "Atoms\Atoms.vcxproj", "{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zcc", "C:\z88dk\src\zcc\zcc.vcxproj", "{DDF3E1DD-FF5A-4292-BD8E-BF3D0D1EE3B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Debug|Win32.Build.0 = Debug|Win32
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Debug|Win32.Deploy.0 = Debug|Win32
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Release|Win32.ActiveCfg = Release|Win32
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Release|Win32.Build.0 = Release|Win32
+		{0BEACDD9-5714-4265-99A8-E0110FCFEA1F}.Release|Win32.Deploy.0 = Release|Win32
+		{DDF3E1DD-FF5A-4292-BD8E-BF3D0D1EE3B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DDF3E1DD-FF5A-4292-BD8E-BF3D0D1EE3B7}.Debug|Win32.Build.0 = Debug|Win32
+		{DDF3E1DD-FF5A-4292-BD8E-BF3D0D1EE3B7}.Release|Win32.ActiveCfg = Release|Win32
+		{DDF3E1DD-FF5A-4292-BD8E-BF3D0D1EE3B7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
